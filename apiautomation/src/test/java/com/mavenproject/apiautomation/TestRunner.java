@@ -9,5 +9,5 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "src/test/resources/features", glue = {"com/mavenproject/apiautomation/StepDefinations"},tags = {"@Test369"}) 
 public class TestRunner {
 	
-	@RunWith(Cucumber.class)
+	
 }

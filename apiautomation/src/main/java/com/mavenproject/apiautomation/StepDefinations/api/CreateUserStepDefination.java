@@ -3,7 +3,7 @@ package com.mavenproject.apiautomation.StepDefinations.api;
 import com.mavenproject.apiautomation.base.RestAssuredUtil;
 import com.mavenproject.apiautomation.entities.UserPayload;
 
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.When;
 
 public class CreateUserStepDefination extends RestAssuredUtil {
 
