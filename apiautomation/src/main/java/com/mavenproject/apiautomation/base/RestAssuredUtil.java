@@ -26,6 +26,8 @@ public class RestAssuredUtil {
 
 	public void feedURI(String URI) {
 		RestAssured.baseURI = URI;
+		System.out.println(URI);
+		System.out.println(URI);
 	}
 
 	public void feedEndpoint(String endpoint) {
