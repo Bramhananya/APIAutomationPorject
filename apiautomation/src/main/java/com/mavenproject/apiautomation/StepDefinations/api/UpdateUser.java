@@ -4,8 +4,8 @@ import org.json.JSONObject;
 
 import com.mavenproject.apiautomation.base.RestAssuredUtil;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 
 public class UpdateUser extends RestAssuredUtil {
 

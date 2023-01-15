@@ -2,7 +2,7 @@
 Feature: I want tp update given API generatijng valid responce
 
  @tag2
-  Scenario Outline: Tc-02- Update the data and verify the data
+  Scenario Outline: Tc-01- Update the data and verify the data
     Given User Provides Valid URI
     When User provides valid endpoint as "/api/users"
     And User provides valid content type as "application/json"
@@ -17,5 +17,3 @@ Feature: I want tp update given API generatijng valid responce
       | name   | job         |
       | Bhim  | Tester      |
       | Sanju | Call center |
-      
-   
