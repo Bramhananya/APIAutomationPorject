@@ -19,4 +19,4 @@ jobs:
         cache: maven
     - name: Build with Maven
       working-directory: D:\a\APIAutomationPorject\APIAutomationPorject\apiautomation
-      run: mvn clean
+      run: mvn clean -Dcucumber.options="--tags @RunPipeline" test
