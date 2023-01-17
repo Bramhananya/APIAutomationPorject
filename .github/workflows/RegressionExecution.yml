@@ -24,3 +24,10 @@ jobs:
     - name: Run Automated TestCases
       working-directory: ./apiautomation
       run: mvn clean -Dtest=TestRunner test
+      
+    - name: Upload Execution Report
+      if : ${{always()}}
+      uses: actions/upload-artifact@v3.1.2
+      with:
+       name: Please download excution report
+       path: D:/a/APIAutomationPorject/APIAutomationPorject/target
