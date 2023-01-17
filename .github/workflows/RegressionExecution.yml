@@ -23,4 +23,4 @@ jobs:
        
     - name: Run Automated TestCases
       working-directory: ./apiautomation
-      run: mvn clean compile -Dtest=TestRunner.java test
+      run: mvn clean -Dcucumber.options="--tags @RunPipeline" test
