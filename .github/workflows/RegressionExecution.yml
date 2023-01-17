@@ -1,11 +1,29 @@
 name: Run Automated Regression Testcases
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
+ workflow_dispatch:
+  inputs:
+    Branches:
+         description: Select Branch for run
+         default: 'main'
+         required: true
+         type: choice
+         options:
+         - main
+         - MyStroyTest-SNDH369852
+         - Story-Test-SNDH236541
+         
+    TestSuite:
+         description: Select Test Suite for Execution
+         default: 'TestRunner'
+         required: true
+         type: choice
+         options:
+         - TestRunner
+         - TestSmokeRunner
+         - TestRegressionRunner
+ 
 jobs:
   build:
     runs-on: windows-latest
@@ -22,7 +40,7 @@ jobs:
        
      - name: Run Automated TestCases
        working-directory: ./apiautomation
-       run: mvn clean -Dtest=TestRunner test
+       run: mvn clean -Dtest=${{github.event.inputs.TestSuite}} test
       
      - name: Upload Execution Report
        if : ${{always()}}
