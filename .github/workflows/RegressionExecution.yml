@@ -22,5 +22,5 @@ jobs:
        maven-version: 3.8.2
        
     - name: Run Automated TestCases
-      working-directory: ./APIAutomationPorject/apiautomation
+      working-directory: ./apiautomation
       run: mvn clean compile -Dtest=TestRunner.java test
