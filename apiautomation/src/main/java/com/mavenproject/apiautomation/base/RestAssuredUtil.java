@@ -20,7 +20,7 @@ public class RestAssuredUtil {
 
 	Map<String, String> headers = new HashMap<String, String>();
 	Response response;
-	String endpoint;
+	static String endpoint;
 	String body;
 
 	public void feedURI(String URI) {
@@ -30,7 +30,7 @@ public class RestAssuredUtil {
 	}
 
 	public void feedEndpoint(String endpoint) {
-		this.endpoint = endpoint;
+		RestAssuredUtil.endpoint = endpoint;
 	}
 
 	public void feedHeaders(String key, String value) {
@@ -63,13 +63,13 @@ public class RestAssuredUtil {
 	}
 
 	public void shouldSeeUserNameIsPresent(String username) {
-		try {
-			userPojos = mapper.readValue(response.getBody().asString(), UserPojos.class);
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
+//		try {
+////			userPojos = mapper.readValue(response.getBody().asString(), UserPojos.class);
+//		} catch (JsonMappingException e) {
+//			e.printStackTrace();
+//		} catch (JsonProcessingException e) {
+//			e.printStackTrace();
+//		}
 //		Assert.assertEquals("Expected status name is not there ", username, userPojos.getName());
 	}
 

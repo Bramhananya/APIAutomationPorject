@@ -1,6 +1,7 @@
 
 Feature: I want tp verify given API generatijng valid responce
 
+@RunPipeline
   Scenario Outline: TC-01 - Verify Create user API response
     Given User Provides Valid URI
     When User provides valid endpoint as "/api/users"
@@ -11,7 +12,6 @@ Feature: I want tp verify given API generatijng valid responce
     Then Verify the response code as 201
     And Verify reponse contains name as "<name>"
     And Verify reponse contains job as "<job>"
-
     #  Then User hit the "GET" method
     Examples: 
       | name   | job         |
